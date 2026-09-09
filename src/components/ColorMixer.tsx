@@ -93,12 +93,6 @@ export const ColorMixer = () => {
 
           <nav className="flex items-center gap-5 text-sm font-medium">
             <a
-              href="#about"
-              className="text-foreground transition hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background"
-            >
-              About
-            </a>
-            <a
               href="https://github.com/"
               target="_blank"
               rel="noreferrer"
