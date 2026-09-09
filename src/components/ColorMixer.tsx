@@ -4,6 +4,7 @@ import { ExternalLink, Plus } from "lucide-react";
 import { ColorPicker } from "./ColorPicker";
 import { ColorResult } from "./ColorResult";
 import { hexToRgbChannels, mixColors, normalizeHex } from "@/lib/color";
+import { BlurReveal } from "./blur-reveal";
 
 interface MixHistory {
   color1: string;
@@ -105,14 +106,24 @@ export const ColorMixer = () => {
         </header>
 
         <section className="app-hero mx-auto mt-8 max-w-3xl text-center sm:mt-10 lg:mt-10 xl:mt-8">
-          <h1 className="app-hero-title text-balance text-5xl font-semibold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-5xl xl:text-6xl">
-            Two colors
-            <br />
-            infinite possibilities.
-          </h1>
-          <p className="app-hero-copy mx-auto mt-3 max-w-lg text-base leading-7 text-muted-foreground lg:mt-2">
+          <BlurReveal
+            as="h1"
+            className="app-hero-title text-balance text-5xl font-semibold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-5xl xl:text-6xl"
+            speedReveal={1.5}
+            inView
+          >
+            Two colors, infinite possibilities.
+          </BlurReveal>
+
+          <BlurReveal
+            as="p"
+            className="app-hero-copy mx-auto mt-3 max-w-lg text-base leading-7 text-muted-foreground lg:mt-2"
+            speedReveal={4}
+            delay={0.25}
+            inView
+          >
             Mix two colors and see the result in real time.
-          </p>
+          </BlurReveal>
         </section>
 
         <section
@@ -207,9 +218,11 @@ export const ColorMixer = () => {
 
         <footer
           id="about"
-          className="app-footer mt-auto py-3 text-sm text-muted-foreground"
+          className="flex gap-1 app-footer mt-auto py-3 text-sm text-muted-foreground"
         >
-          Made with ♡ by Thainá
+          Made with <img src="../../public/rainbow-heart.png" className="w-4 h-4"/> 
+          by 
+          <a href="https://github.com/thainapires" target="_blank">Thainá</a>
         </footer>
       </div>
     </main>
