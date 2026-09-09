@@ -1,5 +1,7 @@
 # Color Blend Lab
 
+<img width="1900" height="928" alt="image" src="https://github.com/user-attachments/assets/36c6d26c-8fbc-446a-a1f9-279f1be88134" />
+
 Aplicação web para misturar duas cores e explorar o resultado em tempo real. O projeto permite ajustar a proporção entre duas cores HEX, copiar formatos úteis e descobrir variações que ajudam na criação de paletas.
 
 ## Funcionalidades
