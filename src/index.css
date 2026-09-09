@@ -316,3 +316,29 @@
     padding-bottom: 0.25rem !important;
   }
 }
+
+@layer components {
+  .tool-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 9999px;
+    border: 1px solid hsl(var(--border) / 0.8);
+    background: hsl(var(--background) / 0.62);
+    padding: 0.45rem 0.75rem;
+    color: hsl(var(--muted-foreground));
+    backdrop-filter: blur(10px);
+    transition: color var(--transition-smooth), border-color var(--transition-smooth), transform var(--transition-smooth), background-color var(--transition-smooth);
+  }
+
+  .tool-button:hover {
+    color: hsl(var(--foreground));
+    border-color: hsl(var(--foreground) / 0.22);
+    transform: translateY(-1px);
+  }
+
+  .tool-button:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 4px;
+  }
+}
